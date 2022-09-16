@@ -52,7 +52,7 @@ public final class HashPasswordSpec implements PasswordSpec {
 
     @Override
     public boolean equals(Object other) {
-        return other instanceof HashPasswordSpec && Arrays.equals(digest, ((HashPasswordSpec)other).digest);
+        return other instanceof HashPasswordSpec && MessageDigest.equals(digest, ((HashPasswordSpec)other).digest);
     }
 
     @Override
